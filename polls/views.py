@@ -124,6 +124,8 @@ class UserSetPasswordViewset(viewsets.ModelViewSet):
     """
         实现用户修改密码
         输入username、password，验证正确返回password 修改成功，否则返回HTTP_400_BAD_REQUEST
+
+        test1test1
     """
 
     serializer_class = UserSetPasswordSerializer
