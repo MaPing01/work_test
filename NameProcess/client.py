@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-# Author: Colin Yao
+# Author: maping01
 #客户端
 import socket
 client = socket.socket() #定义协议类型,相当于生命socket类型,同时生成socket连接对象
-client.connect(('114.116.39.230',8600))
+client.connect(('114.116.39.230',8900))
 while True:
     msg = input(">>>").strip()
     if len(msg) ==0:continue
