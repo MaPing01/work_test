@@ -1,8 +1,6 @@
-import socket
+import socketserver
+import os
+import json
 
-class FtpClient(object):
-    def __init__(self):
-        self.client = socket.socket()
 
-    def connect( self ):
-        self.client.connect(h)
+class
