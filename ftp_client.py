@@ -16,7 +16,7 @@ class FtpClient(object):
             cmd_str = cmd.split()[0]
             if hasattr(self,'cmd_%s'%cmd_str):
                 func = getattr(self,'cmd_%s'%cmd_str)
-                func(cmd_str)
+                func(cmd)
 
 
     def cmd_put( self,*args ):
@@ -26,6 +26,7 @@ class FtpClient(object):
             if os.path.isfile(filename):
                 filesize = os.stat(filename).st_size
                 msg_dic = {
+                    'action':'put',
                     'filename':filename,
                     'filesize':filesize
                 }
@@ -46,5 +47,5 @@ class FtpClient(object):
 
 
 ftp = FtpClient()
-ftp.connect('0.0.0.0',9999)
+ftp.connect('0.0.0.0',9998)
 ftp.interactive()
