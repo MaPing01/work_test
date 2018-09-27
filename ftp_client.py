@@ -42,8 +42,34 @@ class FtpClient(object):
                 print(filename,'is not exist')
 
 
-    def cmd_get( self ):
-        pass
+    def cmd_get( self ,*args):
+        cmd_split = args[0].split()
+        if len(cmd_split) > 1:
+            filename = cmd_split[1]
+            msg_dic = {
+                'action': 'put',
+                'filename': filename
+            }
+            if os.path.isfile(filename):
+                f = open(filename+'get','wb')
+            else:
+                f = open(filename,'wb')
+            self.client.send(json.dumps(msg_dic).encode('utf-8'))
+            self.data = self.client.recv(1024)
+            msg_dic = json.loads(self.data.decode('utf-8'))
+            filesize = msg_dic['filesize']
+            receivesize = 0
+            if receivesize < filesize:
+                f.write(self.data)
+                receivesize += len(self.data)
+            else:
+                print(filename,'dowloaded sucess....')
+
+
+
+
+
+
 
 
 ftp = FtpClient()
