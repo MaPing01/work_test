@@ -1,3 +1,6 @@
 print("in __init__")
 
-from .import test1
+from NameProcess import test1
+import sys
+
+print(sys.path[0])
