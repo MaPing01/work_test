@@ -47,30 +47,27 @@ class FtpClient(object):
         if len(cmd_split) > 1:
             filename = cmd_split[1]
             msg_dic = {
-                'action': 'put',
+                'action': 'get',
                 'filename': filename
             }
             if os.path.isfile(filename):
-                f = open(filename+'get','wb')
+                f = open(filename+'.get','wb')
             else:
                 f = open(filename,'wb')
             self.client.send(json.dumps(msg_dic).encode('utf-8'))
             self.data = self.client.recv(1024)
             msg_dic = json.loads(self.data.decode('utf-8'))
             filesize = msg_dic['filesize']
+            self.client.send(b'200 ok')
             receivesize = 0
-            if receivesize < filesize:
-                f.write(self.data)
-                receivesize += len(self.data)
+            while receivesize < filesize:
+                data = self.client.recv(1024)
+                f.write(data)
+                lenth = len(data)
+                receivesize += lenth
             else:
                 print(filename,'dowloaded sucess....')
-
-
-
-
-
-
-
+                f.close()
 
 ftp = FtpClient()
 ftp.connect('0.0.0.0',9998)
