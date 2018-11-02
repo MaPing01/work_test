@@ -2,6 +2,13 @@
 <project version="4">
   <component name="PublishConfigData" serverName="work_test">
     <serverData>
+      <paths name="18VoiceBot2.0">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="230">
         <serverdata>
           <mappings>
@@ -9,14 +16,14 @@
           </mappings>
         </serverdata>
       </paths>
-      <paths name="VoiceBot">
+      <paths name="Copy of project-level server '134'">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="VoiceBot2.0">
+      <paths name="VoiceBot">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

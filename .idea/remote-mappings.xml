@@ -11,6 +11,13 @@
             </list>
           </settings>
         </remote-mappings>
+        <remote-mappings server-id="python@sftp://root@114.116.39.230:22/usr/bin/python3">
+          <settings>
+            <list>
+              <mapping local-root="$PROJECT_DIR$" remote-root="/root/workspace/demos/mptest" />
+            </list>
+          </settings>
+        </remote-mappings>
       </list>
     </list>
   </component>

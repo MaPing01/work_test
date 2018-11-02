@@ -29,6 +29,22 @@ class FtpHandler(socketserver.BaseRequestHandler):
         else:
             print('file has uploaded')
 
+    def cmd_get(self,*args):
+        msg_dic = args[0]
+        filename = msg_dic['filename']
+        if os.path.isfile(filename):
+            filesize = os.stat(filename).st_size
+            f = open (filename,'rb')
+        msg_dic = {
+            'filesize':filesize
+        }
+        self.request.send(json.dumps(msg_dic).encode('utf-8'))
+        data = self.request.recv(1024)
+        for line in f:
+            self.request.send(line)
+        else:
+            print(filename,'dowloaded success...')
+            f.close()
 
     def handle(self):
         while True:
