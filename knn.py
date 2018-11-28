@@ -27,7 +27,7 @@ def classify(testSet,dataSet,lable,k):
     datasize = dataSet.shape[0]
     diffMat = np.tile(testSet,(datasize,1)) - dataSet
     sqdiffMat = diffMat ** 2
-    sqdistance = sqdiffMat.sum(axis=1)
+    sqdistance = sqdiffMat.sum(axis=1)#按行求和
     distance = sqdistance ** 0.5
     sortDist = distance.argsort()  #由小到大排列返回索引
     countDict = {}
