@@ -27,14 +27,19 @@ def classify(testSet,dataSet,lable,k):
     datasize = dataSet.shape[0]
     diffMat = np.tile(testSet,(datasize,1)) - dataSet
     sqdiffMat = diffMat ** 2
-    sqdistance = sqdiffMat.sum(axis=1)#按行求和
+    sqdistance = sqdiffMat.sum(axis=1)
     distance = sqdistance ** 0.5
     sortDist = distance.argsort()  #由小到大排列返回索引
     countDict = {}
     for i in range(k):
         testLable = lable[sortDist[i]]
         countDict[testLable] = countDict.get(testLable,0) + 1
-    sortedcountDict = sorted(countDict.items(),key=operator.itemgetter(1),reverse=True)
+    sortedcountDict = sorted(countDict.items(),key=operator.itemgetter(1),reverse=True) #sorted返回列表
+    #> aa
+    #{'a': 1, 'b': 2, 'c': 3}
+    #> sortedcountDict = sorted(aa.items(), key=operator.itemgetter(1), reverse=True)
+    #> sortedcountDict
+    #[('c', 3), ('b', 2), ('a', 1)]
     print(sortedcountDict[0])
     print(sortedcountDict[0][0])
     return sortedcountDict[0][0]

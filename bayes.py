@@ -49,10 +49,8 @@ def train(train_matrix, train_category):
                 print("before p1num:%s"%(p1num))
                 print("before p1_denom:%s"%(p1_denom))
                 print("sum(train_matrix[%s]:%s"%(i,sum(train_matrix[i])))
-
                 p1num += train_matrix[i]
                 p1_denom += sum(train_matrix[i])
-
                 print("after p1num += train_matrix[%s]:%s"%(i,p1num))
                 print("after p1_denom += sum(train_matrix[%s]):%s"%(i,p1_denom))
         else:
@@ -60,26 +58,23 @@ def train(train_matrix, train_category):
                 print("before p0num:%s"%(p0num))
                 print("before p0_denom:%s"%(p0_denom))
                 print("sum(train_matrix[%s]:%s" % (i, sum(train_matrix[i])))
-
                 p0num += train_matrix[i]
                 p0_denom += sum(train_matrix[i])
-
                 print("after p0num += train_matrix[%s]:%s"%(i,p0num))
                 print("after p0_denom += sum(train_matrix[%s]):%s"%(i,p0_denom))
-
     for i in range(num_words):
-        p0vec.append(math.log(p0num[i] / p0_denom))
-        p1vec.append(math.log(p1num[i] / p1_denom))
-        # p0vec.append(p0num[i] / p0_denom)
-        # p1vec.append(p1num[i] / p1_denom)
+        # p0vec.append(math.log(p0num[i] / p0_denom))
+        # p1vec.append(math.log(p1num[i] / p1_denom))
+        p0vec.append(p0num[i] / p0_denom)
+        p1vec.append(p1num[i] / p1_denom)
     # 取对数是为了防止多个很小的数相乘使得程序下溢出或者得到不正确答案。
     return p_abusive, p0vec, p1vec
 
 def classify(vec2classify, p0vec, p1vec, pclass1):
-    p0 = sum(vec2classify * p0vec) + math.log(pclass1)
-    p1 = sum(vec2classify * p1vec) + math.log(1.0-pclass1)
-    # p0 = np.multiply(vec2classify * p0vec)*pclass1
-    # p1 = np.multiply(vec2classify * p1vec )*(1.0 - pclass1)
+    # p0 = sum(vec2classify * p0vec) + math.log(pclass1)
+    # p1 = sum(vec2classify * p1vec) + math.log(1.0-pclass1)
+    p0 = np.multiarray(vec2classify * p0vec)*pclass1
+    p1 = np.multiarray(vec2classify * p1vec )*(1.0 - pclass1)
     if p1 > p0:
         return 1
     else:

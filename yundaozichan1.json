@@ -1,0 +1,553 @@
+{
+	"flow": {
+
+		"left": {
+			"left": {
+				"recordNumber": [
+					"FLOW1",
+					"money",
+					"FLOW1a"
+				],
+				"text": "好的，您的应还金额为X元，请您于24小时内处理完成，之后我们会为您查账，如果未查到款项，后续部门会再次联系你，感谢您的配合，如有问题可联系4008602166，打扰了，再见！",
+				"type": "record",
+				"isEnd": "true",
+				"score": {
+					"attitude": ["90", "有还款诚意"]
+				}
+			},
+			"right": {
+				"recordNumber": [
+					"FLOW2"
+				],
+				"text": "那不好意思，稍后我们会去核实一下，如果没有查到您的还款，会再次和您取得联系，如有问题可联系4008602166，打扰了，再见！",
+				"type": "record",
+				"isEnd": "true",
+				"score": {
+					"attitude": ["93", "已经还款"]
+				}
+			},
+			"next": {
+				"left": {
+					"recordNumber": [
+						"FLOW1",
+						"money",
+						"FLOW1a"
+					],
+					"text": "好的，您的应还金额为X元，请您于24小时内处理完成，之后我们会为您查账，如果未查到款项，后续部门会再次联系你，感谢您的配合，如有问题可联系4008602166，打扰了，再见！",
+					"type": "record",
+					"isEnd": "true",
+					"score": {
+						"attitude": ["90", "有还款诚意"]
+					}
+				},
+				"right": {
+					"recordNumber": [
+						"FLOW2"
+					],
+					"text": "那不好意思，稍后我们会去核实一下，如果没有查到您的还款，会再次和您取得联系，如有问题可联系4008602166，打扰了，再见！",
+					"type": "record",
+					"isEnd": "true",
+					"score": {
+						"attitude": ["93", "已经还款"]
+					}
+				},
+				"next": {
+					"left": {
+						"recordNumber": [
+							"FLOW1",
+							"money",
+							"FLOW1a"
+						],
+						"text": "好的，您的应还金额为X元，请您于24小时内处理完成，之后我们会为您查账，如果未查到款项，后续部门会再次联系你，感谢您的配合，如有问题可联系4008602166，打扰了，再见！",
+						"type": "record",
+						"isEnd": "true",
+						"score": {
+							"attitude": ["90", "有还款诚意"]
+						}
+					},
+					"right": {
+						"recordNumber": [
+							"FLOW2"
+						],
+						"text": "那不好意思，稍后我们会去核实一下，如果没有查到您的还款，会再次和您取得联系，如有问题可联系4008602166，打扰了，再见！",
+						"type": "record",
+						"isEnd": "true",
+						"score": {
+							"attitude": ["93", "已经还款"]
+						}
+					},
+					"next": {
+						"recordNumber": [
+							"FLOW3"
+						],
+						"text": "您好，我司已经通知到位，如果届时没有收到您的还款，我司会安排后续工作人员跟您联系处理，未避免给您工作和生活造成困扰，请您务必重视您的欠款问题。如有问题可联系4008602166。再见！",
+						"type": "record",
+						"isEnd": "true",
+						"score": {
+							"attitude": ["92", "无还款诚意"]
+						}
+					},
+					"recordNumber": [
+						"FLOW4"
+					],
+					"text": "您好，贷款逾期信息会被上传的人行征信系统，一旦信用收到影响，您将来买房买车出行都会收到影响，甚至您孩子将来上学都可能受到影响，所以请您务必重视您的欠款问题。您有问题可联系4008602166。可以吗？",
+					"type": "record"
+				},
+				"recordNumber": [
+					"FLOW5"
+				],
+				"text": "您好，如果您不及时还款导致逾期，根据您所签署的合同，会产生相应的逾期费用，同时会影响您的信用，还请您务必及时还款。请问还有问题吗？",
+				"type": "record"
+			},
+			"recordNumber": [
+				"FLOW6",
+				"bankname1",
+				"FLOW6a",
+				"money",
+				"FLOW6b"
+			],
+			"text": "您好，这边是xx，您本期车贷应还金额为XX，即将到期，请您及时处理，以免逾期，对您的个人信用造成影响。可以吗？",
+			"type": "record"
+		},
+		"right": {
+			"next": {
+				"recordNumber": [
+					"FLOW7"
+				],
+				"text": "本次提醒非常重要，如果您方便，请您一定及时转告，如有问题可联系4008602166，非常感谢您的配合，再见！",
+				"type": "record",
+				"isEnd": "true",
+				"score": {
+					"attitude": ["97", "无效号码"]
+				}
+			},
+			"right": {
+				"recordNumber": [
+					"FLOW8"
+				],
+				"text": "谢谢您的配合，祝您生活愉快，再见！",
+				"type": "record",
+				"isEnd": "true",
+				"score": {
+					"attitude": ["97", "无效号码"]
+				}
+			},
+			"recordNumber": [
+				"FLOW9",
+				"bankname1",
+				"FLOW9a",
+				"name",
+				"FLOW9b"
+			],
+			"text": "这边是XX，如果您认识XX，麻烦您帮忙转告一下，他在我公司的业务需尽快处理，如有疑问，可回电：4008602166，谢谢您！",
+			"type": "record"
+		},
+		"next": {
+			"left": {
+				"recordNumber": [
+					"FLOW1",
+					"money",
+					"FLOW1a"
+				],
+				"text": "好的，您的应还金额为X元，请您于24小时内处理完成，之后我们会为您查账，如果未查到款项，后续部门会再次联系你，感谢您的配合，如有问题可联系4008602166，打扰了，再见！",
+				"type": "record",
+				"isEnd": "true",
+				"score": {
+					"attitude": ["90", "有还款诚意"]
+				}
+			},
+			"right": {
+				"recordNumber": [
+					"FLOW2"
+				],
+				"text": "那不好意思，稍后我们会去核实一下，如果没有查到您的还款，会再次和您取得联系，如有问题可联系4008602166，打扰了，再见！",
+				"type": "record",
+				"isEnd": "true",
+				"score": {
+					"attitude": ["93", "已经还款"]
+				}
+			},
+			"next": {
+				"left": {
+					"recordNumber": [
+						"FLOW1",
+						"money",
+						"FLOW1a"
+					],
+					"text": "好的，您的应还金额为X元，请您于24小时内处理完成，之后我们会为您查账，如果未查到款项，后续部门会再次联系你，感谢您的配合，如有问题可联系4008602166，打扰了，再见！",
+					"type": "record",
+					"isEnd": "true",
+					"score": {
+						"attitude": ["90", "有还款诚意"]
+					}
+				},
+				"right": {
+					"recordNumber": [
+						"FLOW2"
+					],
+					"text": "那不好意思，稍后我们会去核实一下，如果没有查到您的还款，会再次和您取得联系，如有问题可联系4008602166，打扰了，再见！",
+					"type": "record",
+					"isEnd": "true",
+					"score": {
+						"attitude": ["93", "已经还款"]
+					}
+				},
+				"next": {
+					"left": {
+						"recordNumber": [
+							"FLOW1",
+							"money",
+							"FLOW1a"
+						],
+						"text": "好的，您的应还金额为X元，请您于24小时内处理完成，之后我们会为您查账，如果未查到款项，后续部门会再次联系你，感谢您的配合，如有问题可联系4008602166，打扰了，再见！",
+						"type": "record",
+						"isEnd": "true",
+						"score": {
+							"attitude": ["90", "有还款诚意"]
+						}
+					},
+					"right": {
+						"recordNumber": [
+							"FLOW2"
+						],
+						"text": "那不好意思，稍后我们会去核实一下，如果没有查到您的还款，会再次和您取得联系，如有问题可联系4008602166，打扰了，再见！",
+						"type": "record",
+						"isEnd": "true",
+						"score": {
+							"attitude": ["93", "已经还款"]
+						}
+					},
+					"next": {
+						"recordNumber": [
+							"FLOW3"
+						],
+						"text": "您好，我司已经通知到位，如果届时没有收到您的还款，我司会安排后续工作人员跟您联系处理，未避免给您工作和生活造成困扰，请您务必重视您的欠款问题。如有问题可联系4008602166。再见！",
+						"type": "record",
+						"isEnd": "true",
+						"score": {
+							"attitude": ["92", "无还款诚意"]
+						}
+					},
+					"recordNumber": [
+						"FLOW4"
+					],
+					"text": "您好，贷款逾期信息会被上传的人行征信系统，一旦信用收到影响，您将来买房买车出行都会收到影响，甚至您孩子将来上学都可能受到影响，所以请您务必重视您的欠款问题。您有问题可联系4008602166。可以吗？",
+					"type": "record"
+				},
+				"recordNumber": [
+					"FLOW5"
+				],
+				"text": "您好，如果您不及时还款导致逾期，根据您所签署的合同，会产生相应的逾期费用，同时会影响您的信用，还请您务必及时还款。请问还有问题吗？",
+				"type": "record"
+			},
+			"recordNumber": [
+				"FLOW6",
+				"bankname1",
+				"FLOW6a",
+				"money",
+				"FLOW6b"
+			],
+			"text": "您好，这边是xx，您本期车贷应还金额为XX，即将到期，请您及时处理，以免逾期，对您的个人信用造成影响。可以吗？",
+			"type": "record"
+		},
+
+		"recordNumber": [
+			"FLOW10",
+			"name",
+			"gender"
+		],
+
+		"text": "喂，您好！请问是XX先生/女士吗？",
+		"type": "record"
+	},
+	"qestionAnnswers": {
+		"AN1": {
+			"recordNumber": [
+				"AN1"
+			],
+			"text": "抱歉，我这边信号不好，您刚说什么啊？",
+			"type": "record"
+		},
+		"AN2": {
+			"recordNumber": [
+				"AN2"
+			],
+			"text": "不好意思，这边没听清，能再说一遍么",
+			"type": "record"
+		},
+		"FAQ1": {
+			"recordNumber": [
+				"FAQ1"
+			],
+			"text": "您好，我们系统显示有您号码，检测到您有一笔款待还，请您尽快处理。",
+			"type": "record"
+		},
+		"FAQ2": {
+			"recordNumber": [
+				"FAQ2"
+			],
+			"text": "嗯，我听着呢，您说",
+			"type": "record"
+		},
+		"FAQ3": {
+			"recordNumber": [
+				"FAQ3"
+			],
+			"text": "哦，不好意思，您请讲！",
+			"type": "record"
+		},
+		"FAQ4": {
+			"recordNumber": [
+				"FAQ4",
+				"bankname1",
+				"FAQ4a"
+			],
+			"text": "我这里是XX的，我叫什么不重要，请您及时处理您的贷款。",
+			"type": "record"
+		},
+		"FAQ5": {
+			"recordNumber": [
+				"FAQ5"
+			],
+			"text": "我们联系电话为4008602166。如有问题，可随时致电咨询。",
+			"type": "record"
+		},
+		"FAQ6": {
+			"recordNumber": [
+				"FAQ6"
+			],
+			"text": "我们的还款方式多种多样，这样吧，这些具体问题您咨询一下我们的客服电话好吗？号码是4008602166，重复一遍，4008602166",
+			"type": "record"
+		},
+		"FAQ7": {
+			"recordNumber": [
+				"FAQ7"
+			],
+			"text": "非常抱歉，这些问题我确实没法准确回答您，您可致电4008602166详细咨询。",
+			"type": "record"
+		},
+		"FAQ8": {
+			"recordNumber": [
+				"FAQ8"
+			],
+			"text": "您好，我是谁不重要，重要的是您的款项即将到期，请您务必及时处理。",
+			"type": "record"
+		},
+		"FAQ9": {
+			"recordNumber": [
+				"FAQ9",
+				"bankname1",
+				"FAQ9a",
+				"money",
+				"FAQ9b"
+			],
+			"text": "您好，这边是xx，您本期车贷贷应还金额为XX，请您及时处理，以免逾期，对您的个人信用造成影响。",
+			"type": "record"
+		},
+		"FAQ10": {
+			"recordNumber": [
+				"FAQ10"
+			],
+			"text": "您好，我们的还款方式多种多样，您在哪都可以处理，如果实在不方便，也可以请您家人朋友代为处理。",
+			"type": "record"
+		},
+		"FAQ11": {
+			"recordNumber": [
+				"FAQ11"
+			],
+			"text": "您好，我司首先会联系您本人，如果联系不上，或者没能达成还款协议，我司会联系相关联系人调查了解您的情况，并转告让您回电，并未透露您的详细欠款信息。",
+			"type": "record"
+		},
+		"FAQ12": {
+			"recordNumber": [
+				"FAQ12"
+			],
+			"text": "您好，由于您的款项即将到期，所以提前提醒一下，以免您忘记，非常抱歉打扰了，再见！",
+			"type": "record"
+		},
+		"FAQ13": {
+			"recordNumber": [
+				"FAQ13"
+			],
+			"text": "您好，如果您正常还款是不会产生逾期费用的，费用的计算方式已经在合同里注明了，您本人知晓并同意之后才办理的借款，所以请您务必及时还款。",
+			"type": "record"
+		},
+		"FAQ14": {
+			"recordNumber": [
+				"FAQ14",
+				"name",
+				"FAQ14a",
+				"bankname1",
+				"FAQ14b"
+			],
+			"text": "您好，系统显示这个号码一直是XX本人使用的，如果您认识他，请您转告他立即处理XX的欠款，谢谢您，再见！",
+			"type": "record",
+			"isEnd": "true",
+          "score": {
+            "attitude": ["97","无效号码"]
+          }
+		},
+		"FAQ15": {
+			"recordNumber": [
+				"FAQ15",
+				"bankname1",
+				"FAQ15a",
+				"money",
+				"FAQ15b"
+				
+			],
+			"text": "不好意思，耽误您一分钟，您在X的贷款即将到期，金额X元，请您务必尽快处理。如果您没听清，稍后我会再给您来电话。",
+			"type": "record"
+		},
+		"FAQ16": {
+			"recordNumber": [
+				"FAQ16"
+			],
+			"text": "我公司的贷款办理是需要提供本人证件并经过多项验证的，如果您拒绝还款，我公司会采取相应的后续措施处理，请您务必重视。",
+			"type": "record"
+		},
+		"FAQ17": {
+			"recordNumber": [
+				"FAQ17"
+			],
+			"text": "非常抱歉，我这里是不能办理分期的，如果您有这方面的问题，可以联系4008602166。",
+			"type": "record"
+		},
+		"FAQ18": {
+			"recordNumber": [
+				"FAQ18",
+				"money",
+				"FAQ18a"
+			],
+			"text": "您好，您的金额为XX元，如有问题可以联系4008602166。",
+			"type": "record"
+		},
+		"FAQ19": {
+			"recordNumber": [
+				"FAQ19"
+			],
+			"text": "您好，逾期费用是手段不是目的，重点是会影响您的信用，欠对您工作生活都会产生极其严重的影响，买房、买车、出行、创业都会可能受到限制，而且我公司可能会派当地人员上门催收，所以请您务必慎重对待，尽快处理。",
+			"type": "record"
+		},
+		"FAQ20": {
+			"recordNumber": [
+				"FAQ20"
+			],
+			"text": "您好，如果您自己不方便处理，您也可以让您的家人或者朋友帮您处理一下，请您务必及时还款，万一逾期产生违约金就不划算了，而且还可能影响您的信用记录。",
+			"type": "record"
+		},
+		"FAQ21": {
+			"recordNumber": [
+				"FAQ21",
+				"bankname1",
+				"FAQ21a",
+				"name",
+				"gender"
+			],
+			"text": "这里是X，请问是XX先生/女士吗？",
+			"type": "record"
+		},
+		"FAQ22": {
+			"recordNumber": [
+				"FAQ22"
+			],
+			"text": "与工作无关的话题，不好回答，请您尽快完成还款。",
+			"type": "record"
+		},
+		"FAQ23": {
+			"recordNumber": [
+				"FAQ23"
+			],
+			"text": "抱歉，我这里发不了短信，如有问题可以联系4008602166。",
+			"type": "record"
+		},
+		"FAQ24": {
+			"recordNumber": [
+				"FAQ24"
+			],
+			"text": "您好，您是否有借款，您自己应该清楚，我只负责通知，如果您不及时处理，后续所有后果由您自行承担，如有问题可以联系4008602166。",
+			"type": "record"
+		},
+		"FAQ25": {
+			"recordNumber": [
+				"FAQ25",
+				"bankname1",
+				"FAQ25a"
+			],
+			"text": "您好，我们这边是XX，给您致电仅提醒您还款，如有问题可以联系4008602166。",
+			"type": "record"
+		},
+		"FAQ26": {
+			"recordNumber": [
+				"FAQ26"
+			],
+			"text": "您好，这个问题您可以联系客服4008602166咨询一下。",
+			"type": "record"
+		},
+		"FAQ27": {
+			"recordNumber": [
+				"FAQ27"
+			],
+			"text": "欠款一旦逾期，首先会产生逾期费用，其次会影响您的信用，一旦列为失信人员，对您工作生活都会产生极其严重的影响，买房、买车、出行、创业都可能会受到限制，请您务必慎重处理。",
+			"type": "record"
+		},
+		"FAQ28": {
+			"recordNumber": [
+				"FAQ28"
+			],
+			"text": "关于费用计算的这些具体问题，请您咨询一下我们的客服电话好吗？号码是4008602166，重复一遍，4008602166",
+			"type": "record"
+		},
+
+		"GREET1": {
+			"recordNumber": [
+				"GREET1"
+			],
+			"text": "您好，在吗？",
+			"type": "record"
+		},
+		"GREET2": {
+			"recordNumber": [
+				"GREET2"
+			],
+			"text": "喂，在听吗？",
+			"type": "record"
+		},
+		"GREET3": {
+			"recordNumber": [
+				"GREET3"
+			],
+			"text": "喂？您能听到吗",
+			"type": "record"
+		},
+		"WHAT": {
+			"recordNumber": [
+				"WHAT"
+			],
+			"text": "您说什么，我没听清楚，能再说一遍吗？",
+			"type": "record"
+		},
+		"AN2END": {
+			"recordNumber": [
+				"AN2end"
+			],
+			"text": "对不起，我这边听不清您的声音，我们稍后会再次联系您，如有疑问，如有问题可联系4008602166，再见！",
+			"type": "record",
+			"isEnd": "true",
+			"score": {
+				"attitude": ["92", "无还款诚意"]
+			}
+		},
+		"WHATEND": {
+			"recordNumber": [
+				"WHATend"
+			],
+			"text": "不好意思，我这里听不见您的声音，稍后再跟您联系，如有问题可联系4008602166，再见！",
+			"type": "record",
+			"isEnd": "true",
+			"score": {
+				"attitude": ["92", "无还款诚意"]
+			}
+		}
+	}
+}
